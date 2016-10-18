@@ -1,0 +1,51 @@
+table.array{
+  width:100%;
+}
+
+table.array td{
+  border:#fa4542 4px solid;
+  border-bottom:#fa4542 4px solid!important;
+  width:25%;
+  position: relative;
+  height:100px;
+  padding-top:45px;
+  text-align:center;
+}
+
+table.array td span{
+  position: absolute;
+  right:0;
+  top:0;
+  border-bottom: 4px solid #fa4542;
+  border-left: 4px solid #fa4542;
+  width: 40px;
+  height: 40px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.slides{
+  width:90%!important;
+}
+.syntaxhighlighter .gutter{
+  display: none;
+}
+
+.code-reveal{
+  color:white;
+  background-color:#fa4542;
+  border-radius:2px;
+  padding:10px 20px!important;
+  -webkit-box-shadow: 0 3px 0 0 #a20101;
+  -moz-box-shadow: 0 3px 0 0 #a20101;
+  box-shadow: 0 3px 0 0 #a20101;
+}
+
+.code-reveal:hover{
+  background-color:#f6201d;
+  cursor:pointer;
+}
+
+.hidden-code{
+  display: none;
+}

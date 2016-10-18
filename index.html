@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+    <meta name='description' content='  Introduction to Arrays' />
+    <title>Arrays</title>
+    <link rel="stylesheet" href="css/reveal.css" type="text/css" >
+    <link rel="stylesheet" href="css/white.css" type="text/css" >
+    <link rel="stylesheet" href="css/main.css" type="text/css" >
+    <link rel="stylesheet" href="css/shCore.css" type="text/css" >
+    <link rel="stylesheet" href="css/shCoreDefault.css" type="text/css" >
+  </head>
+  <body>
+    <div class="reveal">
+      <img src="images/ga-logo.png" style="width:50px;height:50px;padding:20px;"/>
+      <div class="slides">
+        <section>
+          <h1>Arrays</h1>
+          <p>A list (container) of items that are organized first to last</p>
+          <table class="array">
+            <tr>
+              <td>
+                <span class="index">0</span>
+                "red"
+              </td>
+              <td>
+                <span class="index">1</span>
+                "blue"
+              </td>
+              <td>
+                <span class="index">2</span>
+                "green"
+              </td>
+              <td>
+                <span class="index">3</span>
+                "purple"
+              </td>
+            </tr>
+          </table>
+        </section>
+        <section>
+          <h1>Creating Arrays</h1>
+          <pre class="brush: ruby">
+            Array.new() == []
+
+            colours = ["green", "blue", "red", "orange"]
+
+            scores = [60, 43, 93, 78]
+
+            change = [1, "pennies", 2, "dimes", 3, "quarters"]
+          </pre>
+        </section>
+        <section>
+          <h1>Accessing Arrays</h1>
+          <pre class="brush: ruby">
+            colours = ["green", "blue", "red", "orange"]
+          </pre>
+          <p>
+            colours[0] --> "green"
+          </p>
+          <p>
+            colours[1] --> "blue"
+          </p>
+          <p>
+            colours[2] --> "red"
+          </p>
+          <p>
+            colours[3] --> "orange"
+          </p>
+          <p>
+            colours[-1] --> <span class="code-reveal" data-code-id="code-1">?</span> <span id="code-1" class="hidden-code">"orange"</span>
+          </p>
+        </section>
+        <section>
+          <h1>Updating Arrays</h1>
+          <pre class="brush: ruby">
+            colours = ["green", "blue", "red", "orange"]
+            colours[1] = "yellow"
+          </pre>
+          <p>
+            colours --> ["green", "yellow", "red", "orange"]
+          </p>
+        </section>
+        <section>
+          <h1>.append()</h1>
+          <pre class="brush: ruby">
+            colours = ["green", "blue"]
+            colours.append("red")
+          </pre>
+          <p>
+            colours --> <span class="code-reveal" data-code-id="code-2">?</span> <span id="code-2" class="hidden-code">["green", "blue", "red"]</span>
+          </p>
+        </section>
+        <section>
+          <h1>.prepend()</h1>
+          <pre class="brush: ruby">
+            colours = ["green", "blue"]
+            colours.prepend("red")
+          </pre>
+          <p>
+            colours --> <span class="code-reveal" data-code-id="code-3">?</span> <span id="code-3" class="hidden-code">["red", "green", "blue"]</span>
+          </p>
+        </section>
+        <section>
+          <h1>.insert()</h1>
+          <pre class="brush: ruby">
+            colours = ["green", "blue", "red"]
+            colours.insert(1, "yellow")
+          </pre>
+          <p>
+            colours --> <span class="code-reveal" data-code-id="code-4">?</span> <span id="code-4" class="hidden-code">["green", "yellow", "blue", "red"]</span>
+          </p>
+          <pre class="brush: ruby">
+            colours = ["green", "blue", "red"]
+            colours.insert(5, "yellow")
+          </pre>
+          <p>
+            colours --> <span class="code-reveal" data-code-id="code-5">?</span> <span id="code-5" class="hidden-code">["green", "blue", "red", nil, nil, "yellow"]</span>
+          </p>
+        </section>
+        <section>
+          <h1>.each()</h1>
+          <pre class="brush: ruby">
+            colours = ["green", "blue", "red"]
+            colours.each do |colour|
+              puts "#{colour} is a colour"
+            end
+          </pre>
+          <p>
+            <span class="code-reveal" data-code-id="code-6">?</span> 
+            <span id="code-6" class="hidden-code">
+              "green is a colour"<br/>
+              "blue is a colour"<br/>
+              "red is a colour"<br/>
+            </span>
+          </p>
+        </section>
+        <section>
+          <h1>.each_with_index()</h1>
+          <pre class="brush: ruby">
+            colours = ["green", "blue", "red"]
+            people = ["Kate", "John", "Sally"]
+
+            colours.each_with_index do |colour, index|
+              puts "#{people[index]} likes #{colour}"
+            end
+          </pre>
+          <p>
+            <span class="code-reveal" data-code-id="code-7">?</span> 
+            <span id="code-7" class="hidden-code">
+              "Kate likes green"<br/>
+              "John likes blue"<br/>
+              "Sally likes red"<br/>
+            </span>
+          </p>
+        </section>
+
+        <section>
+          <h1>.select()</h1>
+          <pre class="brush: ruby">
+            scores = [30, 89, 20, 44, 97, 29, 18]
+            scores.select {|score| score > 40}
+          </pre>
+          <span class="code-reveal" data-code-id="code-8">?</span> 
+          <span id="code-8" class="hidden-code">
+            [89, 44, 97]
+          </span>
+        </section>
+      </div>
+  </body>
+  <footer>
+    <!-- <script src="/js/main.js" type="text/javascript" charset="utf-8"></script> -->
+    <script src="js/reveal.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/shCore.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/shBrushRuby.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+      $(function(){
+        SyntaxHighlighter.all()
+        Reveal.initialize({
+          controls: true,
+          progress: true,
+          history: true,
+          center: true,
+          transition: 'slide'
+        })
+        $(".code-reveal").on("click", function(){
+          $(this).hide();
+          $("#" + $(this).data('code-id')).show();
+        })
+      });      
+    </script>
+  </footer>
+</html>
