@@ -8,6 +8,11 @@
     src: url(../fonts/PFDinDisplayPro-Black.ttf);
 }
 
+@font-face {
+  font-family: News706BTBold;
+  src: url(../fonts/font-2.ttf);
+}
+
 section.has-dark-background, section.has-dark-background h1, section.has-dark-background h2, section.has-dark-background h3, section.has-dark-background h4, section.has-dark-background h5, section.has-dark-background h6 {
   color: #fff; }
 
