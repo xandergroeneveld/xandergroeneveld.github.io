@@ -49,3 +49,7 @@ table.array td span{
 .hidden-code{
   display: none;
 }
+
+.syntaxhighlighter .toolbar {
+  display:none!important;
+}

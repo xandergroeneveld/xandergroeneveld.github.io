@@ -6,9 +6,10 @@
     <title>Arrays</title>
     <link rel="stylesheet" href="css/reveal.css" type="text/css" >
     <link rel="stylesheet" href="css/white.css" type="text/css" >
-    <link rel="stylesheet" href="css/main.css" type="text/css" >
     <link rel="stylesheet" href="css/shCore.css" type="text/css" >
     <link rel="stylesheet" href="css/shCoreDefault.css" type="text/css" >
+    <link rel="stylesheet" href="css/main.css" type="text/css" >
+    <link rel="shortcut icon" type="image/x-icon" href="https://ga-shop-production-herokuapp-com.global.ssl.fastly.net/assets/images/favicon_1gyC3.ico" />
   </head>
   <body>
     <div class="reveal">
@@ -54,22 +55,21 @@
           <h1>Accessing Arrays</h1>
           <pre class="brush: ruby">
             colours = ["green", "blue", "red", "orange"]
+
+            colours[0]
+            => "green"
+
+            colours[2]
+            => "red"
+
+            colours[-1]
           </pre>
-          <p>
-            colours[0] --> "green"
-          </p>
-          <p>
-            colours[1] --> "blue"
-          </p>
-          <p>
-            colours[2] --> "red"
-          </p>
-          <p>
-            colours[3] --> "orange"
-          </p>
-          <p>
-            colours[-1] --> <span class="code-reveal" data-code-id="code-1">?</span> <span id="code-1" class="hidden-code">"orange"</span>
-          </p>
+          <span class="code-reveal" data-code-id="code-1">?</span> 
+          <span id="code-1" class="hidden-code">
+            <pre class="brush: ruby">
+              => "orange"
+            </pre>
+          </span>
         </section>
         <section>
           <h1>Updating Arrays</h1>
@@ -77,9 +77,9 @@
             colours = ["green", "blue", "red", "orange"]
             colours[1] = "yellow"
           </pre>
-          <p>
-            colours --> ["green", "yellow", "red", "orange"]
-          </p>
+          <pre class="brush: ruby">
+            => ["green", "yellow", "red", "orange"]
+          </pre>
         </section>
         <section>
           <h1>.append()</h1>
@@ -87,9 +87,9 @@
             colours = ["green", "blue"]
             colours.append("red")
           </pre>
-          <p>
-            colours --> <span class="code-reveal" data-code-id="code-2">?</span> <span id="code-2" class="hidden-code">["green", "blue", "red"]</span>
-          </p>
+          <pre class="brush: ruby">
+            => ["green", "blue", "red"]
+          </pre>
         </section>
         <section>
           <h1>.prepend()</h1>
@@ -97,9 +97,12 @@
             colours = ["green", "blue"]
             colours.prepend("red")
           </pre>
-          <p>
-            colours --> <span class="code-reveal" data-code-id="code-3">?</span> <span id="code-3" class="hidden-code">["red", "green", "blue"]</span>
-          </p>
+          <span class="code-reveal" data-code-id="code-3">?</span> 
+          <span id="code-3" class="hidden-code">
+            <pre class="brush: ruby">
+              => ["red", "green", "blue"]
+            </pre>
+          </span>
         </section>
         <section>
           <h1>.insert()</h1>
@@ -107,16 +110,22 @@
             colours = ["green", "blue", "red"]
             colours.insert(1, "yellow")
           </pre>
-          <p>
-            colours --> <span class="code-reveal" data-code-id="code-4">?</span> <span id="code-4" class="hidden-code">["green", "yellow", "blue", "red"]</span>
-          </p>
+          <span class="code-reveal" data-code-id="code-4">?</span> 
+          <span id="code-4" class="hidden-code">
+            <pre class="brush: ruby">
+              => ["green", "yellow", "blue", "red"]
+            </pre>
+          </span>
           <pre class="brush: ruby">
             colours = ["green", "blue", "red"]
             colours.insert(5, "yellow")
           </pre>
-          <p>
-            colours --> <span class="code-reveal" data-code-id="code-5">?</span> <span id="code-5" class="hidden-code">["green", "blue", "red", nil, nil, "yellow"]</span>
-          </p>
+          <span class="code-reveal" data-code-id="code-5">?</span> 
+          <span id="code-5" class="hidden-code">
+            <pre class="brush: ruby">
+              => ["green", "blue", "red", nil, nil, "yellow"]
+            </pre>
+          </span>
         </section>
         <section>
           <h1>.each()</h1>
@@ -126,14 +135,14 @@
               puts "#{colour} is a colour"
             end
           </pre>
-          <p>
-            <span class="code-reveal" data-code-id="code-6">?</span> 
-            <span id="code-6" class="hidden-code">
-              "green is a colour"<br/>
-              "blue is a colour"<br/>
-              "red is a colour"<br/>
-            </span>
-          </p>
+          <span class="code-reveal" data-code-id="code-6">?</span> 
+          <span id="code-6" class="hidden-code">
+            <pre class="brush: ruby">
+              => "green is a colour"
+                 "blue is a colour"
+                 "red is a colour"
+            </pre>
+          </span>
         </section>
         <section>
           <h1>.each_with_index()</h1>
@@ -145,14 +154,14 @@
               puts "#{people[index]} likes #{colour}"
             end
           </pre>
-          <p>
-            <span class="code-reveal" data-code-id="code-7">?</span> 
-            <span id="code-7" class="hidden-code">
-              "Kate likes green"<br/>
-              "John likes blue"<br/>
-              "Sally likes red"<br/>
-            </span>
-          </p>
+          <span class="code-reveal" data-code-id="code-7">?</span> 
+          <span id="code-7" class="hidden-code">
+            <pre class="brush: ruby">
+              => "Kate likes green"
+                 "John likes blue"
+                 "Sally likes red"
+            </pre>
+          </span>
         </section>
 
         <section>
@@ -163,8 +172,21 @@
           </pre>
           <span class="code-reveal" data-code-id="code-8">?</span> 
           <span id="code-8" class="hidden-code">
-            [89, 44, 97]
+            <pre class="brush: ruby">
+              => [89, 44, 97]
+            </pre>
           </span>
+        </section>
+        <section>
+          <h1>magic :)</h1>
+          <pre class="brush: ruby">
+            history_students = ["John", "Michael", "Paul", "Jacob"]
+            economics_students = ["Lewis", "Paul", "Jacob", "Frank"]
+            
+            history_students & economics_students
+
+            => ["Paul", "Jacob"]
+          </pre>
         </section>
       </div>
   </body>
